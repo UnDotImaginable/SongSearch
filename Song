@@ -1,0 +1,36 @@
+public class Song implements Comparable<Song>{
+	private String artist = " ";
+	private String title = " ";
+	private String link = " ";
+	private String text = " ";
+	
+	Song () {
+	}
+	
+	Song (String artist, String title, String link, String text) {
+		this.artist = artist;
+		this.title = title;
+		this.link = link;
+		this.text = text;
+	}
+
+	public void setTitle (String title) {
+		this.title = title;
+	}
+	
+	public String getTitle() {
+		return this.title;
+	}
+	
+	@Override
+	public int compareTo(Song o) {
+		return this.title.compareToIgnoreCase(o.title);
+	}
+	
+	@Override
+	public String toString() {
+		return artist + "\t" + title + "\t" + link + "\t" + text;
+	}
+	
+	
+}
